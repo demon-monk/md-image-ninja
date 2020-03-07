@@ -1,0 +1,12 @@
+{
+  "name": "md-image-master",
+  "version": "1.0.0",
+  "main": "./app/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^8.1.0"
+  }
+}
