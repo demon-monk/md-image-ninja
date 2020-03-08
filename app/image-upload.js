@@ -9,12 +9,17 @@ const BASE_URL = "https://sm.ms/api/v2/";
 
 let Authorization = "";
 try {
-  Authorization = fs.readFileSync(path.join(__dirname, "..", "config.json"));
+  const configStr = fs.readFileSync(
+    path.join(__dirname, "..", "config.json"),
+    "utf-8"
+  );
+  const { token } = JSON.parse(configStr);
+  Authorization = token;
 } catch (e) {
   notifier.notify({
     title: "尚未设置API Token",
     message:
-      "请登录sm.ms查看并复制你的API Token到剪切板上，然后回来设置API Token"
+      "请登录sm.ms/home查看并复制你的API Token到剪切板上，然后回来设置API Token"
   });
 }
 
