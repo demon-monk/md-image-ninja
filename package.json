@@ -8,7 +8,7 @@
     "build": "electron-packager . --overwrite --out=build --icon=app/icons/ninja-hd.ico"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-fns": "^2.10.0",
     "electron": "^8.1.0",
     "form-data": "^3.0.0",
